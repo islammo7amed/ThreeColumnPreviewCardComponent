@@ -1,0 +1,120 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: "Lexend Deca", sans-serif;
+	font-optical-sizing: auto;
+	font-style: normal;
+	font-size: 0.94rem;
+	color: hsla(0, 0%, 100%, 0.75);
+}
+
+main {
+	width: 100%;
+	min-height: 100vh;
+	padding: 1rem 0;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-color: hsl(0, 0%, 95%);
+}
+
+article {
+	width: 92%;
+	max-width: 345px;
+	border-radius: 0.7rem;
+	display: flex;
+	flex-direction: column;
+}
+
+article > section {
+	padding: 3rem;
+	position: relative;
+}
+
+.sedan {
+	background-color: hsl(31, 77%, 52%);
+	border-radius: 0.7rem 0.7rem 0 0;
+}
+
+.suv {
+	background-color: hsl(184, 100%, 22%);
+}
+
+.luxury {
+	background-color: hsl(179, 100%, 13%);
+	border-radius: 0 0 0.7rem 0.7rem;
+}
+
+article > section h2 {
+	font-family: "Big Shoulders", sans-serif;
+	text-transform: uppercase;
+	color: hsl(0, 0%, 95%);
+	font-size: 2.2rem;
+}
+
+.car-desc {
+	line-height: 1.5rem;
+}
+
+article > section h2, .car-desc {
+	margin: 1.5rem 0;
+}
+
+.sedan .btn-learn-more {
+	color: hsl(31, 77%, 52%);
+}
+
+.suv .btn-learn-more {
+	color: hsl(184, 100%, 22%);
+}
+
+.luxury .btn-learn-more {
+	color: hsl(179, 100%, 13%);
+}
+
+.btn-learn-more {
+	font-family: "Lexend Deca", sans-serif;
+	cursor: pointer;
+	background-color: hsl(0, 0%, 95%);
+	padding: 0.9rem 1.8rem;
+	border-radius: 1.8rem;
+	border: 2px solid hsl(0, 0%, 95%);
+	font-size: 0.94rem;
+}
+
+.btn-learn-more:hover {
+	background-color: transparent;
+	color: hsl(0, 0%, 95%);;
+}
+
+@media all and (min-width: 48rem) {
+	article {
+		flex-direction: row;
+		max-width: 900px;
+	}
+	
+	.sedan {
+		border-radius: 0.7rem 0 0 0.7rem;
+	}
+
+	.luxury {
+		border-radius: 0 0.7rem 0.7rem 0;
+	}
+	
+	article > section {
+		flex-basis: calc(100% / 3);
+	}
+	
+	.car-desc {
+		margin-bottom: 8.3rem;
+	}
+	
+	.btn-learn-more {
+		position: absolute;
+		bottom: 3rem;
+	}
+}
